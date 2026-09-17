@@ -35,13 +35,15 @@ with st.sidebar:
        # ]
     )
 
-   minimum_sales=st.slider(
-       '최소 매출',
-       min_value=0,
-       max_value=int(df['sales'].max()),  #numpy int로 잡힌다. int 넣어서 정수로 바꿔줘야함
-       value=0,
-       step=500_000,
-   )
+minimum_sales = st.slider(
+    '최소 매출',
+    min_value=0,
+    max_value=int(df['sales'].max()),
+    value=0,
+    step=500_000,
+)
+
+#numpy int로 잡힌다. int 넣어서 정수로 바꿔줘야함
 
 # 검색 조건을 알았기 때문에 필터링을 해주면 된다.
 
